@@ -44,31 +44,12 @@
                 <a class="navbar-item " href="">
                     Home
                 </a>
-                <a class="navbar-link  is-active" href="/documentation/overview/start/">
-                    Docs
+                <a class="navbar-item" href="./rates">
+                    Live Rate
                 </a>
-                <div class="navbar-dropdown ">
-                    <a class="navbar-item " href="/documentation/overview/start/">
-                        Overview
-                    </a>
-                    <a class="navbar-item " href="http://bulma.io/documentation/modifiers/syntax/">
-                        Modifiers
-                    </a>
-
-                    <hr class="navbar-divider">
-                    <div class="navbar-item">
-                        <div>
-                            <p class="is-size-6-desktop">
-                                <strong class="has-text-info">0.5.1</strong>
-                            </p>
-
-                            <small>
-                                <a class="bd-view-all-versions" href="/versions">View all versions</a>
-                            </small>
-
-                        </div>
-                    </div>
-                </div>
+                <a class="navbar-item" href="./rates">
+                    Bank & Currency
+                </a>
             </div>
             <div class="navbar-item has-dropdown is-hoverable is-mega">
                 <div class="navbar-link">
@@ -195,41 +176,38 @@
                     </div>
                 </div>
             </div>
-            <a class="navbar-item " href="">
-                <span class="bd-emoji">❤️</span> &nbsp;Love
+            <a class="navbar-item " href="./review">
+                All &nbsp;<span class="bd-emoji"> ❤️</span> &nbsp;Me
             </a>
         </div>
 
         <div class="navbar-end">
             <a class="navbar-item is-hidden-desktop-only" href="https://github.com/jgthms/bulma" target="_blank">
-        <span class="icon" style="color: #333;">
-          <i class="fa fa-github"></i>
-        </span>
+                <span class="icon" style="color: #333;">
+                  <i class="fa fa-github"></i>
+                </span>
             </a>
             <a class="navbar-item is-hidden-desktop-only" href="https://twitter.com/jgthms" target="_blank">
-        <span class="icon" style="color: #55acee;">
-          <i class="fa fa-twitter"></i>
-        </span>
+                <span class="icon" style="color: #55acee;">
+                  <i class="fa fa-twitter"></i>
+                </span>
             </a>
             <div class="navbar-item">
                 <div class="field is-grouped">
                     <p class="control">
-                        <a class="bd-tw-button button" data-social-network="Twitter" data-social-action="tweet" data-social-target="http://bulma.io" target="_blank" href="https://twitter.com/intent/tweet?text=Bulma: a modern CSS framework based on Flexbox&hashtags=bulmaio&url=http://bulma.io&via=jgthms">
-              <span class="icon">
-    <i class="fa fa-twitter"></i>
-  </span>
-                            <span>
-    Tweet
-  </span>
+                        <a class="button is-primary" href="https://github.com/jgthms/bulma/archive/0.5.1.zip">
+                          <span class="icon">
+                            <i class="fa fa-user-secret"></i>
+                          </span>
+                            <span>Masuk</span>
                         </a>
-
                     </p>
                     <p class="control">
                         <a class="button is-primary" href="https://github.com/jgthms/bulma/archive/0.5.1.zip">
-              <span class="icon">
-                <i class="fa fa-download"></i>
-              </span>
-                            <span>Download</span>
+                          <span class="icon">
+                            <i class="fa fa-users"></i>
+                          </span>
+                            <span>Mendaftar</span>
                         </a>
                     </p>
                 </div>
@@ -304,6 +282,174 @@
                         </div>
                     </form>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- .section -->
+<section class="section has-background-light">
+    <div class="container">
+        <div class="content has-text-centered">
+            <h3 class="title">Kenapa Harus Kami</h3>
+            <p class="subtitle">Keberhasilan dan Kepuasan Transaksi Anda adalah yang utama</p>
+        </div>
+        <div class="columns">
+            <div class="column">
+                <article class="media notification is-info">
+                    <figure class="media-left">
+								<span class="icon is-medium">
+									<i class="fab fa-2x fa-css3-alt"></i>
+								</span>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <h1 class="title is-size-4">Bulma?</h1>
+                            <p class="is-size-5">
+                                Bulma is a modern CSS framework from @jgthms, based on Flexbox.
+                                Using Bulma, we can describe our website's design using just classes. <span class="emoticon">ᕕ( ᐛ )ᕗ</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="column">
+                <article class="media notification is-primary">
+                    <figure class="media-left">
+								<span class="icon is-medium">
+									<i class="fas fa-2x fa-align-justify"></i>
+								</span>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <h1 class="title is-size-4">…Flexbox?</h1>
+                            <p class="is-size-5">
+                                Flexbox is a CSS spec that makes sectioning and aligning more natural.
+                                We don't need to know Flexbox but it's how Bulma works behind-the-scenes. <span class="emoticon">⦤(^ー^)⦥</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            <div class="column">
+                <article class="media notification is-warning">
+                    <figure class="media-left">
+								<span class="icon is-medium">
+									<i class="fas fa-2x fa-shield-alt"></i>
+								</span>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <h1 class="title is-size-4">…Classes?</h1>
+                            <p class="is-size-5">
+                                Instead of writing our CSS per-element, we can use predefined classes.
+                                With enough classes, we can describe our website design using semantics. <span class="emoticon">٩(^ᴗ^)۶</span>
+                            </p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- /.section -->
+
+<section class="section has-background-white">
+    <div class="container">
+        <div class="columns">
+            <div class="column">
+                <article class="media box">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img src="https://bulma.io/images/placeholders/128x128.png">
+                        </p>
+                    </figure>
+                    <div class="media-content ">
+                        <div class="content">
+                            <p>
+                                <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+                                <br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                            </p>
+                        </div>
+                        <nav class="level is-mobile">
+                            <div class="level-left">
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </article>
+            </div>
+            <div class="column">
+                <article class="media box">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img src="https://bulma.io/images/placeholders/128x128.png">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+                                <br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                            </p>
+                        </div>
+                        <nav class="level is-mobile">
+                            <div class="level-left">
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </article>
+            </div>
+            <div class="column">
+                <article class="media box">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img src="https://bulma.io/images/placeholders/128x128.png">
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+                                <strong>John Smith</strong> <small>@johnsmith</small> <small>31m</small>
+                                <br>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.
+                            </p>
+                        </div>
+                        <nav class="level is-mobile">
+                            <div class="level-left">
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-reply"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-retweet"></i></span>
+                                </a>
+                                <a class="level-item">
+                                    <span class="icon is-small"><i class="fas fa-heart"></i></span>
+                                </a>
+                            </div>
+                        </nav>
+                    </div>
+                </article>
             </div>
         </div>
     </div>

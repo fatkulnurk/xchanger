@@ -5,3 +5,11 @@
     margin-bottom: 0;
     padding: .375rem 1rem;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+body{
+    font-family: 'Roboto', sans-serif !important;
+}
+.card {
+    height: 100%;
+}

@@ -13,20 +13,19 @@ class CreateUserTable extends Migration
 
     public function up()
     {
-//        Schema::defaultStringLength(250);
-
-        Schema::defaultStringLength(200);
         Schema::create('user', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('full_name');
-            $table->string('email','255');
-            $table->unique('email');
-            $table->string('phone_number','255')->unique()->nullable();
+            $table->string('first_name');
+            $table->string('middle_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('gender');
+            $table->string('email','150')->unique('email');
+            $table->string('phone_number','20')->unique()->nullable();
             $table->string('password');
             $table->dateTime('birthday');
-            $table->text('address');
+            $table->text('address')->nullable();
             $table->string('country');
-            $table->string('pin','10');
+            $table->string('pin','7');
             $table->string('verified')->nullable();
             $table->timestamps();
         });

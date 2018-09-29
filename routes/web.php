@@ -14,3 +14,12 @@
 Route::get('/', function () {
     return view('home/index');
 });
+
+Route::get('/login', function () {
+    return view('home/login');
+});
+
+Route::get('/register', function () {
+    return view('home/register');
+});
+
