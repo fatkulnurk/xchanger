@@ -49,8 +49,16 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'first_name' => 'required|string|max:255',
+            'middle_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
+            'gender' => 'required',
+            'birthday' => 'required|date',
+            'country' => 'required',
+            'address' => 'nullable',
+            'pin' => 'required',
+            'email' => 'required|string|email|max:150|unique:users',
+            'phone_number' => 'required|string|email|max:20|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
@@ -64,9 +72,17 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+            'first_name'    => $data['first_name'],
+            'middle_name'   => $data['middle_name'],
+            'last_name'     => $data['last_name'],
+            'email'         => $data['email'],
+            'gender'        => $data['gender'],
+            'phone_number'  => $data['phone_number'],
+            'birdthday'     => $data['birthday'],
+            'address'       => $data['address'],
+            'country'       => $data['country'],
+            'pin'           => $data['pin'],
+            'password'      => Hash::make($data['password']),
         ]);
     }
 }

@@ -26,7 +26,11 @@ class CreateUserTable extends Migration
             $table->text('address')->nullable();
             $table->string('country');
             $table->string('pin','7');
+            $table->string('status')->nullable();
             $table->string('verified')->nullable();
+            $table->string('remember_token');
+            $table->unsignedInteger('role');
+            $table->foreign('role')->references('id')->on('user_role');
             $table->timestamps();
         });
     }
