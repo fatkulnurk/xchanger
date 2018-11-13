@@ -7,9 +7,11 @@ html, body {
     height: 100%;
     background: #ECF0F3;
 }
-nav{
-    border-bottom: 2px solid #276cda;
-}
+/*nav{*/
+    /*border-bottom: 2px solid #276cda;*/
+/*}*/
+
+
 nav.navbar {
     border-top: 4px solid #276cda;
     margin-bottom: 1rem;

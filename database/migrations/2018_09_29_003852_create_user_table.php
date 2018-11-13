@@ -19,7 +19,7 @@ class CreateUserTable extends Migration
             $table->string('middle_name')->nullable();
             $table->string('last_name')->nullable();
             $table->string('gender');
-            $table->string('email','150')->unique('email');
+            $table->string('email','150')->unique();
             $table->string('phone_number','20')->unique()->nullable();
             $table->string('password');
             $table->dateTime('birthday');
@@ -28,9 +28,9 @@ class CreateUserTable extends Migration
             $table->string('pin','7');
             $table->string('status')->nullable();
             $table->string('verified')->nullable();
-            $table->string('remember_token');
-            $table->unsignedInteger('role');
-            $table->foreign('role')->references('id')->on('user_role');
+            $table->string('remember_token')->nullable();
+            $table->unsignedInteger('role_id');
+            $table->foreign('role_id')->references('id')->on('user_role');
             $table->timestamps();
         });
     }

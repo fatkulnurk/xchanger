@@ -17,7 +17,8 @@ class CreateTypeTransactionTable extends Migration
     {
         Schema::create('type_transaction', function (Blueprint $table) {
             $table->increments('id');
-            //$table->string('name')->unique();
+            $table->string('name',150)->unique();
+            $table->text('description');
             $table->timestamps();
         });
     }

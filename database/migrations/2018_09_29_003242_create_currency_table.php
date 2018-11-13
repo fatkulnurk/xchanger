@@ -15,10 +15,16 @@ class CreateCurrencyTable extends Migration
     {
         Schema::create('currency', function (Blueprint $table) {
             $table->increments('id');
-            $table->string("currency_name");
-            $table->string("payment_name");
+            $table->string("currency_name",30);
+            $table->string("payment_name",150);
+            $table->unique(['currency_name', 'payment_name']);
             $table->float('stock','10');
             $table->integer('price');
+
+            // data bank
+            $table->string('account_holder');
+            $table->string('account_number');
+            $table->string('message')->nullable();
             $table->timestamps();
         });
     }

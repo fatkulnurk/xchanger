@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\UserRole;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -49,17 +50,19 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'first_name' => 'required|string|max:255',
-            'middle_name' => 'required|string|max:255',
-            'last_name' => 'required|string|max:255',
-            'gender' => 'required',
-            'birthday' => 'required|date',
-            'country' => 'required',
-            'address' => 'nullable',
-            'pin' => 'required',
-            'email' => 'required|string|email|max:150|unique:users',
-            'phone_number' => 'required|string|email|max:20|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+
+            'first_name'        => 'required|string|max:255',
+            'middle_name'       => 'nullable|string|max:255',
+            'last_name'         => 'nullable|string|max:255',
+            'gender'            => 'required',
+            'birthday'          => 'required|date',
+            'country'           => 'required',
+            'address'           => 'nullable',
+            'pin'               => 'required|max:7|min:7',
+            'email'             => 'required|email|unique:user',
+            'phone_number'      => 'required|string|max:20|unique:user',
+            'password'          => 'required|string|min:6'
+
         ]);
     }
 
@@ -71,17 +74,22 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        $user_role = UserRole::where('name','member')->first();
+
+         return User::create([
             'first_name'    => $data['first_name'],
             'middle_name'   => $data['middle_name'],
             'last_name'     => $data['last_name'],
             'email'         => $data['email'],
             'gender'        => $data['gender'],
             'phone_number'  => $data['phone_number'],
-            'birdthday'     => $data['birthday'],
+            'birthday'      => $data['birthday'],
             'address'       => $data['address'],
             'country'       => $data['country'],
             'pin'           => $data['pin'],
+            'role_id'       => $user_role['id'],
+            'verified'      => 'no',
+            'active'        => 'active',
             'password'      => Hash::make($data['password']),
         ]);
     }

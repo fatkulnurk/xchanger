@@ -4,28 +4,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@php echo getenv('SITE_NAME'); @endphp - @yield('title')</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bulma.min.css') }}">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-    <script defer src="https://use.fontawesome.com/releases/v5.1.0/js/all.js"></script>
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">--}}
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 </head>
 <body>
 <header>
     <nav class="navbar ">
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item" href="http://bulma.io">
+                <a class="navbar-item" href="?ref=logo">
                     <h1 class="title is-2">eXchanger</h1>
                 </a>
 
-                <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
+                <a class="navbar-item is-hidden-desktop" href="#" target="_blank">
       <span class="icon" style="color: #333;">
-        <i class="fa fa-github"></i>
+        <i class="fab fa-facebook"></i>
       </span>
                 </a>
 
                 <a class="navbar-item is-hidden-desktop" href="https://twitter.com/jgthms" target="_blank">
       <span class="icon" style="color: #55acee;">
-        <i class="fa fa-twitter"></i>
+        <i class="fab fa-twitter"></i>
       </span>
                 </a>
 
@@ -38,176 +42,66 @@
 
             <div id="navMenubd-example" class="navbar-menu">
                 <div class="navbar-start">
-                    <div class="navbar-item has-dropdown is-hoverable">
-                        <a class="navbar-item " href="">
-                            Home
-                        </a>
-                        <a class="navbar-item" href="./pages/rates">
-                            Live Rate
-                        </a>
-                        <a class="navbar-item" href="./pages/currency">
-                            Bank & Currency
-                        </a>
-                    </div>
-                    <div class="navbar-item has-dropdown is-hoverable is-mega">
-                        <div class="navbar-link">
-                            Blog
-                        </div>
-                        <div id="blogDropdown" class="navbar-dropdown " data-style="width: 18rem;">
-                            <div class="container is-fluid">
-                                <div class="columns">
-                                    <div class="column">
-                                        <h1 class="title is-6 is-mega-menu-title">Sub Menu Title</h1>
-                                        <a class="navbar-item" href="/2017/08/03/list-of-tags/">
-                                            <div class="navbar-content">
-                                                <p>
-                                                    <small class="has-text-info">03 Aug 2017</small>
-                                                </p>
-                                                <p>New feature: list of tags</p>
-                                            </div>
-                                        </a>
-                                        <a class="navbar-item" href="/2017/08/03/list-of-tags/">
-                                            <div class="navbar-content">
-                                                <p>
-                                                    <small class="has-text-info">03 Aug 2017</small>
-                                                </p>
-                                                <p>New feature: list of tags</p>
-                                            </div>
-                                        </a>
-                                        <a class="navbar-item" href="/2017/08/03/list-of-tags/">
-                                            <div class="navbar-content">
-                                                <p>
-                                                    <small class="has-text-info">03 Aug 2017</small>
-                                                </p>
-                                                <p>New feature: list of tags</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="column">
-                                        <h1 class="title is-6 is-mega-menu-title">Sub Menu Title</h1>
-                                        <a class="navbar-item" href="/2017/08/03/list-of-tags/">
-                                            <div class="navbar-content">
-
-                                                <p>
-                                                    <small class="has-text-info">03 Aug 2017</small>
-                                                </p>
-                                                <p>New feature: list of tags</p>
-                                            </div>
-                                        </a>
-                                        <a class="navbar-item " href="/documentation/overview/start/">
-                                            Overview
-                                        </a>
-                                        <a class="navbar-item " href="http://bulma.io/documentation/modifiers/syntax/">
-                                            Modifiers
-                                        </a>
-                                        <a class="navbar-item " href="http://bulma.io/documentation/columns/basics/">
-                                            Columns
-                                        </a>
-                                    </div>
-                                    <div class="column">
-                                        <h1 class="title is-6 is-mega-menu-title">Sub Menu Title</h1>
-                                        <a class="navbar-item" href="/2017/08/03/list-of-tags/">
-                                            <div class="navbar-content">
-                                                <p>
-                                                    <small class="has-text-info">03 Aug 2017</small>
-                                                </p>
-                                                <p>New feature: list of tags</p>
-                                            </div>
-                                        </a>
-                                        <a class="navbar-item" href="/2017/08/03/list-of-tags/">
-                                            <div class="navbar-content">
-                                                <p>
-                                                    <small class="has-text-info">03 Aug 2017</small>
-                                                </p>
-                                                <p>New feature: list of tags</p>
-                                            </div>
-                                        </a>
-                                        <a class="navbar-item" href="/2017/08/03/list-of-tags/">
-                                            <div class="navbar-content">
-                                                <p>
-                                                    <small class="has-text-info">03 Aug 2017</small>
-                                                </p>
-                                                <p>New feature: list of tags</p>
-                                            </div>
-                                        </a>
-
-                                    </div>
-                                    <div class="column">
-                                        <h1 class="title is-6 is-mega-menu-title">Sub Menu Title</h1>
-                                        <a class="navbar-item " href="/documentation/overview/start/">
-                                            Overview
-                                        </a>
-                                        <a class="navbar-item " href="http://bulma.io/documentation/modifiers/syntax/">
-                                            Modifiers
-                                        </a>
-                                        <a class="navbar-item " href="http://bulma.io/documentation/columns/basics/">
-                                            Columns
-                                        </a>
-                                        <a class="navbar-item " href="http://bulma.io/documentation/layout/container/">
-                                            Layout
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <hr class="navbar-divider">
-                            <div class="navbar-item">
-                                <div class="navbar-content">
-                                    <div class="level is-mobile">
-                                        <div class="level-left">
-                                            <div class="level-item">
-                                                <strong>Stay up to date!</strong>
-                                            </div>
-                                        </div>
-                                        <div class="level-right">
-                                            <div class="level-item">
-                                                <a class="button bd-is-rss is-small" href="http://bulma.io/atom.xml">
-                      <span class="icon is-small">
-                        <i class="fa fa-rss"></i>
-                      </span>
-                                                    <span>Subscribe</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="navbar-item " href="./review">
+                    <a class="navbar-item " href="@php echo getenv('SITE_URL'); @endphp">
+                        Home
+                    </a>
+                    <a class="navbar-item" href="@php echo getenv('SITE_URL'); @endphppages/rates">
+                        Live Rate
+                    </a>
+                    <a class="navbar-item" href="@php echo getenv('SITE_URL'); @endphppages/currency">
+                        Bank & Currency
+                    </a>
+                    <a class="navbar-item " href="@php echo getenv('SITE_URL'); @endphppages/fee">
+                        Fees
+                    </a>
+                    <a class="navbar-item " href="@php echo getenv('SITE_URL'); @endphppages/review">
                         All &nbsp;<span class="bd-emoji"> ❤️</span> &nbsp;Me
                     </a>
                 </div>
 
                 <div class="navbar-end">
-                    <a class="navbar-item is-hidden-desktop-only" href="https://github.com/jgthms/bulma" target="_blank">
+                    <a class="navbar-item is-hidden-desktop-only" href="@php echo getenv('SOCIAL_FACEBOOK'); @endphp" target="_blank">
                 <span class="icon" style="color: #333;">
-                  <i class="fa fa-github"></i>
+                  <i class="fab fa-facebook-f"></i>
                 </span>
                     </a>
-                    <a class="navbar-item is-hidden-desktop-only" href="https://twitter.com/jgthms" target="_blank">
+                    <a class="navbar-item is-hidden-desktop-only" href="@php echo getenv('SOCIAL_TWITTER'); @endphp" target="_blank">
                 <span class="icon" style="color: #55acee;">
-                  <i class="fa fa-twitter"></i>
+                  <i class="fab fa-twitter"></i>
                 </span>
                     </a>
                     <div class="navbar-item">
                         <div class="field is-grouped">
+
+                            @guest
                             <p class="control">
-                                <a class="button is-primary" href="https://github.com/jgthms/bulma/archive/0.5.1.zip">
+                                <a class="button is-divider is-light" href="{{ route('login') }}">
                           <span class="icon">
-                            <i class="fa fa-user-secret"></i>
+                            <i class="fa fa-user"></i>
                           </span>
-                                    <span>Masuk</span>
+                                    <span>{{ __('Login') }}</span>
                                 </a>
                             </p>
                             <p class="control">
-                                <a class="button is-primary" href="https://github.com/jgthms/bulma/archive/0.5.1.zip">
+                                <a class="button is-info" href="{{ route('register') }}">
                           <span class="icon">
                             <i class="fa fa-users"></i>
                           </span>
-                                    <span>Mendaftar</span>
+                                    <span>{{ __('Register') }}</span>
                                 </a>
                             </p>
+
+                            @else
+
+                                <p class="control">
+                                    <a class="button is-divider is-light" href="<?php echo getenv("APP_URL");?>dashboard">
+                                        <span class="icon">
+                                         <i class="fa fa-user"></i>
+                                        </span>
+                                        <span>Dashboard</span>
+                                    </a>
+                                </p>
+                            @endguest
                         </div>
                     </div>
                 </div>
@@ -215,5 +109,5 @@
         </div>
     </nav>
 </header>
-@yield('content')
-@extends('home.footer');
+    @yield('content')
+@extends('home.footer')

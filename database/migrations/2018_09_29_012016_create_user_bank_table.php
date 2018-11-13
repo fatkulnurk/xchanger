@@ -18,11 +18,12 @@ class CreateUserBankTable extends Migration
             $table->unsignedInteger('user_id');
             $table->foreign('user_id')
                 ->references('id')->on('user');
-            $table->unsignedInteger('bank_name_id');
-            $table->foreign('bank_name_id')
-                ->references('id')->on('bank_name');
-            $table->string('name_people');
+            $table->string('payment_title');
+            $table->text('description')->nullable();
+            $table->string('bank_name');
+            $table->string('account_holder');
             $table->string('account_number');
+            $table->string('currency');
             $table->timestamps();
         });
     }

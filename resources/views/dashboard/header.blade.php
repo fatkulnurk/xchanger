@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css">
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 </head>
 <body>
 <nav class="navbar">
@@ -26,16 +28,16 @@
         <div id="navMenubd-example" class="navbar-menu">
             <div class="navbar-start">
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-item " href="./dashboard">
+                    <a class="navbar-item " href="@php echo getenv('APP_URL')@endphpdashboard">
                         Dashboard
                     </a>
-                    <a class="navbar-item" href="./dashboard/sell">
+                    <a class="navbar-item" href="@php echo getenv('APP_URL')@endphpdashboard/sell">
                         Sell Money
                     </a>
-                    <a class="navbar-item" href="./dashboard/buy">
+                    <a class="navbar-item" href="@php echo getenv('APP_URL')@endphpdashboard/buy">
                         Buy Money
                     </a>
-                    <a class="navbar-item" href="./dashboard/list">
+                    <a class="navbar-item" href="@php echo getenv('APP_URL')@endphpdashboard/list">
                         List Bank
                     </a>
                 </div>
@@ -43,12 +45,15 @@
 
             <div class="navbar-end">
                 <div class="navbar-item has-dropdown is-hoverable">
-                    <a class="navbar-item" href="./dashboard/profile">
+                    <a class="navbar-item" href="@php echo getenv('APP_URL')@endphpdashboard/account">
                         Profile
                     </a>
-                    <a class="navbar-item" href="./dashboard/logout">
-                        Logout
+                    <a class="navbar-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                        {{ __('Logout') }}
                     </a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
                 </div>
             </div>
         </div>

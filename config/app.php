@@ -161,6 +161,13 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        // CRUD GENERATOR
+        Appzcoder\CrudGenerator\CrudGeneratorServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
+
+        // Telegram Bot
+        Telegram\Bot\Laravel\TelegramServiceProvider::class,
+
     ],
 
     /*
@@ -210,6 +217,12 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        // CRUD FORM
+        'Form'   => Collective\Html\FormFacade::class,
+        'HTML'   => Collective\Html\HtmlFacade::class,
+
+        // Telegram
+        'Telegram'  => Telegram\Bot\Laravel\Facades\Telegram::class
     ],
 
 ];
